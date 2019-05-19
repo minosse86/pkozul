@@ -1,12 +1,12 @@
 page_id: home
-stylesheet: /local/floorplan/examples/home/home.css
+stylesheet: /pkozul/local/floorplan/examples/home/home.css
 #log_level: warning
 debug:
 
 image:
   sizes:
     - min_width: 0
-      location: /local/floorplan/examples/home/home.svg
+      location: /pkozul/local/floorplan/examples/home/home.svg
 
 last_motion:
   entity: sensor.template_last_motion
@@ -15,7 +15,7 @@ last_motion:
 rules:
 #    image_template: '
 #      let number = entities["sensor.time"].state.split(":")[1].substring(1, 2);
-#      return '/local/floorplan/images/numbers/${number}.svg';
+#      return '/pkozul/local/floorplan/images/numbers/${number}.svg';
 #    '
 
   - element: weather.dark_sky_hourly_temperature
@@ -82,7 +82,7 @@ rules:
 
   - entity: weather.dark_sky_hourly
     element: weather.dark_sky_hourly
-    image_template: '/local/floorplan/images/weather/${entity.state}.svg'
+    image_template: '/pkozul/local/floorplan/images/weather/${entity.state}.svg'
 
   - entity: weather.bom_weather
     text_template: '${entity.attributes ? entity.attributes.temperature + "°" : "unknown"}'
@@ -231,7 +231,7 @@ rules:
         class: 'squeezebox-off'
       - state: 'playing'
         class: 'squeezebox-on'
-    image_template: '${(entity.state === "playing") ? entity.attributes.entity_picture : "/local/floorplan/examples/home/images/squeezebox.svg"}'
+    image_template: '${(entity.state === "playing") ? entity.attributes.entity_picture : "/pkozul/local/floorplan/examples/home/images/squeezebox.svg"}'
     action:
       - service: floorplan.variable_set
         data:
@@ -242,7 +242,7 @@ rules:
           page_id: squeezebox
 
   - entity: media_player.bedroom_alarm_panel
-    image_template: '/local/floorplan/buttons/${(entity.state === "playing") ? "stop" : "radio_on"}.svg'
+    image_template: '/pkozul/local/floorplan/buttons/${(entity.state === "playing") ? "stop" : "radio_on"}.svg'
     action:
       service_template: '${(entity.state === "playing") ? "media_player.media_stop" : "media_player.play_media"}'
       data:
