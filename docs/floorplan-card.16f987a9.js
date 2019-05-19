@@ -71,4 +71,4 @@ function l(l,n,u){var e,t,o,a,r;function i(){var c=Date.now()-a;c<n&&c>=0?e=setT
 },{"./lib/floorplan/floorplan":"FqNn"}],"PM1f":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.FloorplanCard=void 0;var e=require("./floorplan-element");class t extends e.FloorplanElement{createAppendContainer(){const e=document.createElement("ha-card");e.header=this._config.title,this.shadowRoot.appendChild(e);const t=document.createElement("div");return t.id="container",e.appendChild(t),t}}exports.FloorplanCard=t,customElements.define("floorplan-card",t);
 },{"./floorplan-element":"U1ok"}]},{},["PM1f"], null)
-//# sourceMappingURL=floorplan-card.16f987a9.js.map
+//# sourceMappingURL=/pkozul/floorplan-card.16f987a9.js.map
